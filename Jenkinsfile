@@ -4,10 +4,10 @@ pipeline {
 	}
 
 	stage ('Build') {
-		def directory = "C:\"
+		def directory = "C:\\"
 
 		echo "Publish ${configuration} -v ${version}"
-		bat "\"${tool 'MSBuildPipeline'}\" DockerHelloWorld.vbproj /p:DeployOnBuild=true /p:PublishProfile=${configuration} /p:PublishDir=${directory}"
+		bat "\\"${tool 'MSBuildPipeline'}\\" DockerHelloWorld.vbproj /p:DeployOnBuild=true /p:PublishProfile=${configuration} /p:PublishDir=${directory}"
 	 
 	}
  
