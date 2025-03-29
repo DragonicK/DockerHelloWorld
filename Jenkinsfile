@@ -1,13 +1,27 @@
-node {
-    stage 'Checkout' {
-        echo 'Checkout'
-    }
+pipeline {
+    agent any
 
-    stage 'Build' {
-        if (env.BRANCH_NAME == 'main') {
-            echo 'I only execute on the master branch'
-        } else {
-            echo 'I execute elsewhere'
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        stage('Build') {
+            steps {
+                 echo "Building ..."
+            }
+        }
+        stage('Publish') {
+            steps {
+                script {
+                    if (env.BRANCH_NAME == 'main') {
+                        echo 'I only execute on the master branch'
+                    } else {
+                        echo 'I execute elsewhere'
+                    }
+                }
+            }
         }
     }
 }
