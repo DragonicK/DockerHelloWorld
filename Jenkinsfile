@@ -1,6 +1,6 @@
 ﻿pipeline {
     agent any 
-
+    
     stage('Example') {
         if (env.BRANCH_NAME == 'main') {
             echo 'I only execute on the master branch'
