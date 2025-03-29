@@ -1,1 +1,1 @@
-﻿ echo "Hello, World!"
+﻿println "Hello, World!"
