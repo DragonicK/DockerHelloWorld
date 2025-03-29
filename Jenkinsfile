@@ -3,6 +3,6 @@
         checkout scm
     }
     stage('Build') {
-        bat 'dotnet build DockerHelloWorld/DockerHelloWorld.vbproj'
+        bat 'dotnet build DockerHelloWorld/DockerHelloWorld.csproj'
     }
 }
