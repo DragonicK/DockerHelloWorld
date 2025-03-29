@@ -1,5 +1,5 @@
 ﻿node {
     stage('Build') {
-        sh "dotnet build DockerHelloWorld/DockerHelloWorld.csproj"
+        echo "Mensagem de build"
     }
 }
