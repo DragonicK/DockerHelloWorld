@@ -1,11 +1,8 @@
-﻿pipeline {
-	stage ('Checkout') {
-		checkout scm
-	}
-
-	stage ('Build') {
-	    echo "Starting build process..."
-		bat 'dotnet build DockerHelloWorld.vbproj'
-	}
- 
+﻿node {
+    stage('Checkout') {
+        checkout scm
+    }
+    stage('Build') {
+        bat 'dotnet build DockerHelloWorld.vbproj'
+    }
 }
