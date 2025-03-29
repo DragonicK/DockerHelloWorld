@@ -1,7 +1,10 @@
-﻿node {
-stage 'Checkout'
-    checkout scm
-
-stage 'Build'
-    echo 'Mensagem de execução'
+﻿pipeline {
+    agent any
+    stages {
+        stage('Exemplo Echo') {
+            steps {
+                bat 'echo "Mensagem no shell do Windows"'
+            }
+        }
+    }
 }
